@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,height=device-height, initial-scale=1">
+        <link  id="favicon" href="/slike/bajk.jpg" rel="shortcut icon" type="image/x-icon"  />
+		<title>NASLOV</title>
+		<style>
+		/*  reset styles */
+			html, body{ 
+				width:100%; height:100%;
+				margin:0; padding:0; 
+			}
+			body *{ 
+				margin:0; padding:0; 
+				box-sizing:border-box;
+			}
+			a{ text-decoration:none;}
+			ol, ul{ list-style-type:none}
+			div.proizvod{
+				width:200px; height: 300px;               /*ili moze auto*/
+				margin: 1em; border: 2px solid black;
+				position:relative; float: left; 
+			} 
+			div.proizvod p{
+				text-align: center; line-height: 2em;		
+			}
+			div.proizvod img{
+				width:100%; height: auto;
+			}
+			div.proizvod p:last-child{
+				position: absolute; bottom:0;
+				margin:0 5em;   /*da centriram cenu na sredinu*/
+			}
+		</style>
+	</head>
+	<body>
+		<input id="pretraga"/>
+		<button id = "snimiLS">sacuvaj kupljeno</button>
+		<button id = "cistiLS">cisti korpu</button>
+	</body>
+	<script>
+		var data = {           // niz objekata
+			proizvodi:[   
+				{ime:"camac",
+				cena:"180",
+				slika:"slike/camac.jfif",
+				broj:"10"
+				},     
+				{ime:"bajk1",
+				cena:"50",
+				slika:"slike/bajk.jpg",
+				broj:"18"
+				},  
+				{ime:"gitara",
+				cena:"30",
+				slika:"slike/gitara.jpg",
+				broj:"8"
+				}, 
+				{ime:"baskljuc",
+				cena:"70",
+				slika:"slike/baskljuc.png",
+				broj:"11"
+				}, 
+				{ime:"bajk2",
+				cena:"50",
+				slika:"slike/bajk.jpg",
+				broj:"5"
+				} 
+			]
+		}; 
+
+		var proizvodi_elementa = [];
+		// var izabrani_proizvodi = [];
+		// var st = localStorage.getItem("izabrani_proizvodi");  // citam sa servera
+		// if (st) izabrani_proizvodi = JSON.parse(st);      // iz niza u objekte
+		// console.log(izabrani_proizvodi);
+		// console.log(Array.isArray(izabrani_proizvodi));    // test da li vraca niz
+
+		// document.getElementById("snimiLS").addEventListener("click", function(){
+		// 	var st = JSON.stringify(izabrani_proizvodi);   // u string
+		// 	localStorage.setItem("izabrani_proizvodi", st);    // snimamo u storage
+		// 	alert("Snimljeni proizvodi u local storage.");
+		// });
+
+		// document.getElementById("cistiLS").addEventListener("click", function(){
+		// 	localStorage.removeItem("izabrani_proizvodi");
+		// 	izabrani_proizvodi = [];
+		// });
+
+		for(let i = 0; i < data.proizvodi.length; i++){
+			proizvodi_elementa[i] = document.createElement("div");   // ubacujemo div
+			proizvodi_elementa[i].classList.add("proizvod");
+		
+			var imeP = document.createElement("p");     // stavlja nam u prazan div prvo jedan p tag
+			imeP.innerHTML = data.proizvodi[i].ime;   // stavljamo ime u p
+			proizvodi_elementa[i].appendChild(imeP);   
+		
+			var slikaP = document.createElement("img");    // pravimo sliku
+			slikaP.src = data.proizvodi[i].slika;  // uzeli smo putanju do slike i ubacili u putanju do slicice
+			proizvodi_elementa[i].insertAdjacentElement("beforeend",slikaP);
+			
+			proizvodi_elementa[i].insertAdjacentHTML("beforeend", "<p>" + data.proizvodi[i].cena + "</p>");  // direkt ubacujemo cenu
+			document.body.appendChild(proizvodi_elementa[i]);
+
+			var korpa = document.createElement("img");
+			korpa.src = "slike/korpa.png"; 
+			korpa.style.width = "50px";
+			korpa.style.height = "50px";
+			korpa.setAttribute("data-barkod", data.proizvodi[i].broj);
+			
+			// korpa.addEventListener("click", function(){
+			// //	alert("dodali ste proizvod u korpu");
+			// 	var br = this.getAttribute("data-barkod");
+			// 	var ind = -1;
+			// 	for(var k = 0; k < izabrani_proizvodi.length; k++){
+			// 		if (br == izabrani_proizvodi[k].barkod){
+			// 			ind = k;
+			// 			//alert("proizvod vec postoji u korpi");
+			// 		}	
+			// 	}
+			// 	if (ind == -1) {
+			// 		izabrani_proizvodi.push({ barkod: br, kolicina: 1});       // ako ne postoji u korpi, dodaj ga
+			// 	}else{
+			// 		izabrani_proizvodi[ind].kolicina++;
+			// 	}
+			// 	console.log(izabrani_proizvodi);
+			// });
+			// proizvodi_elementa[i].appendChild(korpa);
+
+			// var brisi = document.createElement("img");
+			// brisi.src = "slike/kanta.png";
+			// brisi.style.width = "50px";
+			// brisi.style.height = "50px";
+			// brisi.setAttribute("data-barkod", data.proizvodi[i].broj);
+
+			// brisi.addEventListener("click", function(){
+			// 	var br = this.getAttribute("data-barkod");
+			// 	var ind = -1; 
+			// 	for(var j = 0; j < izabrani_proizvodi.length; j++){
+			// 		if (br == izabrani_proizvodi[j].barkod){
+			// 			ind = j;							// ovo nam treba za kasnije
+			// 			izabrani_proizvodi.splice(j,1); // brise iz korpe
+			// 		}				
+			// 	} 
+			// 	console.log(izabrani_proizvodi);
+			// 	if (ind == -1){
+			// 			alert("proizvod nije u korpi prethodno odabranih");
+			// 	}else{
+			// 			proizvodi_elementa[ind].remove();   // brise iz html elementa(kad se rifresuje, vraca se proizvod)
+			// 	}
+			// });
+			// proizvodi_elementa[i].appendChild(brisi);    
+			
+			
+		}   
+
+		           
+
+	</script>
+</html>

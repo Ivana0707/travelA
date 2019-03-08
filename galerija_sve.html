@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,height=device-height, initial-scale=1">
+        <link  id="favicon" href="/slike/bajk.jpg" rel="shortcut icon" type="image/x-icon"  />
+		<title>PUTOVANJA</title>
+		<style>
+			@import url('https://fonts.googleapis.com/css?family=Gloria+Hallelujah');
+			@import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
+			@import url('https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Kalam|Kaushan+Script|Permanent+Marker');
+			@import url('https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Kalam|Kaushan+Script|Permanent+Marker|Shojumaru');
+		/*  reset styles */
+		html, body{ width:100%; height:100%; margin:0; padding:0; background-color:#FEFFEC; }
+			body *{ margin:0; padding:0; box-sizing:border-box; 
+			/* font-family: 'Permanent Marker', cursive; */
+			/* font-family: 'Gloria Hallelujah', cursive; */
+			/* font-family: 'Shojumaru', cursive; */
+			/* font-family: 'Kaushan Script', cursive; */
+			/* font-family: 'Shojumaru', cursive; */
+			}
+			a{ text-decoration:none;}
+			ol, ul{ list-style-type:none}
+			header{
+				display:grid;
+				height: 10vh;
+				grid-template-columns: 1fr 500px 1fr;
+				font-family: 'Shojumaru', cursive;
+			}
+			.sitelogo{
+				line-height: 10vh; height: 10vh;
+				position: relative; 
+				font-size: 3vw;  /*vw da bi se smanjivala sa velicinom ekrana*/
+				font-family: 'Shojumaru', cursive;
+			}
+			img#logo2{
+				height:10vh; height: 50px;
+				/* padding: 0; */
+				 /* margin-left:5%; */
+			}
+			span.sitename{
+				position: absolute;  left:0; width:100%; height:100%;
+				/* text-align:center;  */
+				font-family: 'Shojumaru', cursive;
+				/* top: 50%; transform: translate(0, -50%); */
+				}
+			span.sitename a{
+				/* color:#583428 */
+				color:#594C46;
+			}
+			ul {
+				grid-area: 1/3/2/4;
+				display:flex; flex-direction: row; justify-content: space-evenly; 
+				align-items: center;
+				font-family: 'Kaushan Script', cursive;
+			}
+			ul li:hover{
+				text-transform: uppercase;
+			}
+			div.container{
+				display: grid; 
+				grid-template-columns: 1fr 7fr;
+				/* border: 1px solid black; */
+				background-image:url('slike/gal2.jpg');
+				background-repeat: no-repeat; background-size: cover; background-position: center;
+			}
+			div#sidebar{
+				/* border: 1px solid black; */
+				padding: 10px;
+				/* background-image:url('slike/pocetna2.jpg');
+				background-repeat: no-repeat; background-size: cover; background-position: 0 0; */
+			}
+
+			div.galerija{
+				display: flex; flex-wrap: wrap;
+				justify-content: center;
+			}
+			div.destinacija{
+				width: 30%;
+				box-shadow: 4px 4px 9px rgb(163, 163, 160);
+				position: relative; float: left; margin: 10px;
+			}
+			div.destinacija:hover{
+				box-shadow: -4px -4px 9px rgb(163, 163, 160);
+			}
+			div.destinacija img{
+				width:100%; height: auto;
+			}
+			div.nazivSlike{
+				text-align: center; line-height: 2em;
+				background-color: rgb(218, 202, 194);
+				/* background-color: #FEC66F; */
+				/* background-color: #CD9A83; */
+				/* background-color:#CFA18A; */
+				color: rgb(131, 129, 128);
+			}
+			div.nazivSlike:hover{
+				background-color: white; 
+			}
+			a{ display: block; text-align: center; }
+			a.link:link{ text-transform: uppercase; }
+			a.link:hover{ text-decoration: overline; }
+			a:link{ color:#594C46; }
+			a:visited { color:#594C46; }  
+			a:hover{ color:#594C46; }  
+			a:active { color:black; }                                    /* selektovani link */
+		</style>
+	</head>
+	<body>
+		<header>
+			<!-- <div class='sitelogo'>
+				<img src='slike/logo2.png' alt='logo2' id='logo2'>
+				<span class='sitename'><a href ='pocetna_prva.html'>PUTOVANJA</a></span>
+			</div> -->
+			<div class='sitelogo'>
+				<span class='sitename'><a href ='pocetna_prva.html'>PU<img src='slike/logo2.png' alt='logo2' id='logo2'>OVANJA</a></span>
+			</div>
+			<ul id="glavni_meni">
+					<li><a href ='pocetna_prva.html' target='_blank'>početak</a></li>
+					<li><a href ='galerija_sve.html' target='_blank'>destinacije</a></li>
+					<li><a href ='pitanja.html' target='_blank'>pitanja</a></li>
+					<li><a href ='kontakt.html' target='_blank'>kontakt</a></li>
+			</ul>
+		</header>
+		<div class="container">
+			<div id='sidebar'>
+					<input id='search' type="text"><button id='pretraga'>pretrazi</button>
+				<div id='filteri'>
+					<!-- <label><input type="checkbox" name="c1" id="c1" /><span>letovanje</span></label><br>
+					<label><input type="checkbox" name="c1" id="c2" /><span>zimovanje </span></label><br>
+					<label><input type="checkbox" name="c1" id="c3" /><span>vikend putovanje</span></label> -->
+					<label><input type="radio" name="c1" id="c0" value="" checked/><span>prikazi sve</span></label><br>
+					<label><input type="radio" name="c1" id="c1" value="letovanje"/><span>letovanje</span></label><br>
+					<label><input type="radio" name="c1" id="c2" value="zimovanje" /><span>zimovanje </span></label><br>
+					<label><input type="radio" name="c1" id="c3" value="vikend" /><span>vikend putovanje</span></label>
+
+				</div>
+				
+			</div>
+			<div class="galerija"></div>
+		</div>
+	</body>
+	<script>
+
+		var data = {
+			destinacije:[
+				{ tip: 'vikend putovanje', drzava: 'Srbija', mesto: 'Perućac', trajanje: '3 dana', cena: '5000 rsd', slika:'slike/perucac1.jpg', destlink:'dest_perucac.html'},
+				{ tip: 'letovanje', drzava: 'Grčka', mesto: 'Lefkada - Nikiana', trajanje: '15 dana', cena: '30000 rsd', slika:'slike/nikiana8.jpg', destlink:'dest_nikiana.html'},
+				{ tip: 'letovanje', drzava: 'Grčka', mesto: 'Halkidiki - Pefkohori', trajanje: '10 dana', cena: '15000 rsd', slika:'slike/pefkohori8.jpg', destlink:'dest_pefkohori.html'},
+				{ tip: 'letovanje', drzava: 'Grčka', mesto: 'Halkidiki - Potidea', trajanje: '10 dana', cena: '20000 rsd', slika:'slike/potidea1.jpg', destlink:'dest_potidea.html'},
+				{ tip: 'letovanje', drzava: 'Grčka', mesto: 'Egina - Agia Marina', trajanje: '15 dana', cena: '30000 rsd', slika:'slike/egina9.jpg', destlink:'dest_egina.html'},
+				// { tip: 'vikend putovanje', drzava: 'Bugarska', mesto: 'Rila - Paničište', trajanje: '3 dana', cena: '8000 rsd', slika:'slike/brda.jpg', destlink:'dest_perucac.html'},
+				{ tip: 'vikend putovanje', drzava: 'Srbija', mesto: 'Zlatar', trajanje: '3 dana', cena: '4000 rsd', slika:'slike/zlatar1.jpg', destlink:'dest_zlatar.html'},
+				{ tip: 'zimovanje', drzava: 'Srbija', mesto: 'Zlatar', trajanje: '10 dana', cena: '15000 rsd', slika:'slike/zlatar6.jpg', destlink:'dest_zlatar.html'},
+				// { tip: 'vikend putovanje', drzava: 'Rumunija', mesto: 'Transalpina', trajanje: '3 dana', cena: '7000 rsd', slika:'slike/brda.jpg', destlink:'dest_perucac.html'},
+				{ tip: 'zimovanje', drzava: 'Grčka', mesto: 'Planina Olimp', trajanje: '7 dana', cena: '15000 rsd', slika:'slike/olimp1.jpg', destlink:'dest_olimp.html'},
+				{ tip: 'letovanje', drzava: 'Grčka', mesto: 'Sivota', trajanje: '10 dana', cena: '5000 rsd', slika:'slike/sivota10.jpg', destlink:'dest_sivota.html'},
+				{ tip: 'vikend putovanje', drzava: 'Srbija', mesto: 'Borsko jezero', trajanje: '3 dana', cena: '6000 rsd', slika:'slike/borsko6.jpg', destlink:'dest_borsko.html'}
+			]
+		};
+		
+		var sve_destinacije = [];
+
+		for(let i = 0; i < data.destinacije.length; i++){
+			// sve_destinacije[i] = document.createElement('div');
+			// sve_destinacije[i].classList.add('destinacija');
+
+			// var slikaDestinacije = document.createElement("img");
+			// slikaDestinacije.src = data.destinacije[i].slika;
+			// sve_destinacije[i].insertAdjacentElement('afterbegin', slikaDestinacije);
+
+			// var naziv = document.createElement('div');
+			// naziv.classList.add('nazivSlike');
+			// sve_destinacije[i].appendChild(naziv);
+
+			// var link1 = document.createElement("a");
+			// link1.href = '#';
+			// link1.classList.add("link"); 
+			// link1.innerHTML = data.destinacije[i].mesto;
+			// naziv.appendChild(link1);
+
+			// var link2 = document.createElement("a");
+			// link2.href = '#';
+			// link1.classList.add("tip"); 
+			// link2.innerHTML = data.destinacije[i].tip;
+			// naziv.appendChild(link2);
+			sve_destinacije[i] = napravi_div_u_galeriji(data.destinacije[i]);
+			document.querySelector('.galerija').appendChild(sve_destinacije[i]);
+		}
+		function napravi_div_u_galeriji(dest){
+			var novi_div = document.createElement('div');
+			novi_div.classList.add('destinacija');
+
+			var slikaDestinacije = document.createElement("img");
+			slikaDestinacije.src = dest.slika;
+			novi_div.insertAdjacentElement('afterbegin', slikaDestinacije);
+
+			var naziv = document.createElement('div');
+			naziv.classList.add('nazivSlike');
+			novi_div.appendChild(naziv);
+
+			var link1 = document.createElement("a");
+			link1.href = dest.destlink;
+			link1.target = '_blank';
+			link1.classList.add("link"); 
+			link1.innerHTML = dest.mesto;
+			naziv.appendChild(link1);
+
+			var link2 = document.createElement("a");
+			link2.href = '#';
+			link1.classList.add("tip"); 
+			link2.innerHTML = dest.tip;
+			naziv.appendChild(link2);
+			return novi_div;
+		}
+
+		function pretrazi(pret){
+			var d = pret;  // procitali
+			// document.querySelector('.galerija').innerHTML = '';  // obrisali
+			if (pret != ''){
+				document.querySelector('.galerija').innerHTML = '';  // obrisali
+			}
+			sve_destinacije = [];  // resetovali
+			var ind = -1;
+			for(var i = 0; i < data.destinacije.length; i++){
+				if (data.destinacije[i].mesto.toLowerCase().indexOf(d) > -1 || data.destinacije[i].drzava.toLowerCase().indexOf(d) > -1){
+					sve_destinacije[i] = napravi_div_u_galeriji(data.destinacije[i]);
+					document.querySelector('.galerija').appendChild(sve_destinacije[i]);
+					ind = i;
+				}else
+					if(data.destinacije[i].tip.toLowerCase().indexOf(d) > -1 ){
+						sve_destinacije[i] = napravi_div_u_galeriji(data.destinacije[i]);
+						document.querySelector('.galerija').appendChild(sve_destinacije[i]);
+						ind = i;
+					}
+			}
+			if (ind == -1)
+				document.querySelector('.galerija').innerHTML = "nema traženih rezultata";
+		}
+		document.querySelector('#pretraga').onclick = function(){
+			pretrazi(document.querySelector('#search').value.toLowerCase());
+			// var d = document.querySelector('#search').value.toLowerCase();  // procitali
+			// document.querySelector('.galerija').innerHTML = '';  // obrisali
+			// sve_destinacije = [];  // resetovali
+			// for(var i = 0; i < data.destinacije.length; i++){
+			// 	if (data.destinacije[i].mesto.toLowerCase().indexOf(d) > -1 || data.destinacije[i].drzava.toLowerCase().indexOf(d) > -1){
+			// 		sve_destinacije[i] = napravi_div_u_galeriji(data.destinacije[i]);
+			// 		document.querySelector('.galerija').appendChild(sve_destinacije[i]);
+			// 	}else
+			// 		if(data.destinacije[i].tip.toLowerCase().indexOf(d) > -1 ){
+			// 			sve_destinacije[i] = napravi_div_u_galeriji(data.destinacije[i]);
+			// 			document.querySelector('.galerija').appendChild(sve_destinacije[i]);
+			// 		}
+			// }
+		}
+
+		document.querySelector("#search").addEventListener('keyup', function(event){
+			if (event.keyCode === 13){
+				pretrazi(document.querySelector('#search').value.toLowerCase());
+			}
+		});
+
+		document.querySelector("#filteri").addEventListener('click', function(){
+			// var c3 = document.querySelector('#c3').checked;
+			var neki ='';
+			document.querySelector('#search').value = '';
+			// if (c1 == true )     // moze i if (c1)
+			// 	neki = 'letovanje';
+			// if (c2 == true )     
+			// 	neki = 'zimovanje';
+			// if (c3 == true )    
+			// 	neki = 'vikend putovanje';
+
+	    	if (document.querySelector("input[name='c1']:checked") !== null ){
+                neki = document.querySelector("input[name='c1']:checked").value;
+                document.querySelector('.galerija').innerHTML = '';
+            }
+
+			// var d = neki;  // procitali
+			pretrazi(neki);
+		// 	if (neki != ''){
+		// 		document.querySelector('.galerija').innerHTML = '';  // obrisali
+		// 	}
+		// 	sve_destinacije = [];  // resetovali
+		// 	for(var i = 0; i < data.destinacije.length; i++){
+		// 		if (data.destinacije[i].mesto.toLowerCase().indexOf(d) > -1 || data.destinacije[i].drzava.toLowerCase().indexOf(d) > -1){
+		// 			sve_destinacije[i] = napravi_div_u_galeriji(data.destinacije[i]);
+		// 			document.querySelector('.galerija').appendChild(sve_destinacije[i]);
+		// 		}else{
+		// 			if(data.destinacije[i].tip.toLowerCase().indexOf(d) > -1 ){
+		// 				sve_destinacije[i] = napravi_div_u_galeriji(data.destinacije[i]);
+		// 				document.querySelector('.galerija').appendChild(sve_destinacije[i]);
+		// 			}
+		// 	}
+		// }
+	});
+	
+
+	
+
+	</script>
+</html>

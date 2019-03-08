@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,height=device-height, initial-scale=1">
+        <link  id="favicon" href="/slike/bajk.jpg" rel="shortcut icon" type="image/x-icon"  />
+		<title>PUTOVANJA</title>
+		<style>
+		/*  reset styles */
+			html, body{ width:100%; height:100%; margin:0; padding:0; background-color: beige;}
+			body *{ margin:0; padding:0; box-sizing:border-box; }
+			a{ text-decoration:none;}
+			ol, ul{ list-style-type:none}
+			header{
+				display:grid;
+				height: 100px;
+				grid-template-columns: 1fr 500px 1fr;
+			}
+			section#glavni{
+				display:grid;
+				height: 75vh;
+				background-image:url('slike/brda.jpg');
+				background-repeat: no-repeat; background-size: cover; background-position: center;
+				justify-content: center; align-content: center;
+			}
+			footer{
+				display:grid;
+				grid-template-columns: 1fr 200px 200px 1fr;
+				height: 100px;
+			}
+			ul#glavni_meni{
+				grid-area: 1/2/2/3;
+				display:grid;
+				grid-template-columns: repeat(4, 1fr);
+				justify-items: center; align-items:end;
+			}
+			#opcije, .ime_drzave{
+				background-color: rgba(192, 183, 183, 0.466);
+				border-radius: 20px;
+				box-shadow:4px 4px 30px rgba(192, 183, 183, 0.842),-4px -4px 30px rgba(192, 183, 183, 0.842);
+				animation-name: pojavise;  animation-duration: 2s; animation-timing-function: ease-out; 	
+				animation-fill-mode:forwards;
+				animation-delay: 0;  animation-play-state: running;
+			}
+			@keyframes pojavise {	
+				0% {opacity:0;}		
+				100% {opacity:1;} 
+			}
+			div#opcije{
+				font-size: 2em;
+			}
+			div.ime_drzave{
+				display: inline-block;
+				width: 120px; height: 2em;
+				background-color: rgba(192, 183, 183, 0.466);
+				text-align: center; line-height: 2em;
+				font-size: 1em;
+			}
+			.sakriven{
+				display: none;
+			}
+			div.ime_drzave:hover{
+				background-color: rgba(192, 183, 183, 0.096);
+				text-shadow:2px 2px 3px white, -2px -2px 3px white, -2px 2px 3px white, 2px -2px 3px white;
+				font-size: 1em;
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<ul id="glavni_meni">
+				<li><a href ='pocetna.html' target='_blank'>POČETAK</a></li>
+				<li><a href ='galerija.html' target='_blank'>GALERIJA</a></li>
+				<li><a href ='pitanja.html' target='_blank'>PITANJA</a></li>
+				<li><a href ='kontakt.html' target='_blank'>KONTAKT</a></li>
+			</ul>
+		</header>
+		<section id='glavni'>
+			<div id='opcije'>IZABERI SVOJE PUTOVANJE</div>
+			<div id='zemlje' class='sakriven'>
+				<a href='srbija.html' target='_blank'><div class='ime_drzave'>SRBIJA</div></a>
+				<a href='grcka.html' target='_blank'><div class='ime_drzave'>GRČKA</div></a>
+				<a href='bugarska.html' target='_blank'><div class='ime_drzave'>BUGARSKA</div></a>
+			</div>
+		</section>
+		<footer></footer>
+	</body>
+	<script>
+
+		document.querySelector('#opcije').addEventListener('click', function(){
+			document.querySelector('#zemlje').classList.remove('sakriven');
+			document.querySelector('#opcije').classList.add('sakriven');  // ili className = 'sakriven';
+		});
+
+
+		
+	</script>
+</html>

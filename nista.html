@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,height=device-height, initial-scale=1">
+        <link  id="favicon" href="/slike/bajk.jpg" rel="shortcut icon" type="image/x-icon"  />
+		<title>PUTOVANJA</title>
+		<style>
+		/*  reset styles */
+			html, body{ 
+				width:100%; height:100%;
+				margin:0; padding:0; 
+			}
+			body *{ 
+				margin:0; padding:0; 
+				box-sizing:border-box;
+			}
+			a{ text-decoration:none;}
+			ol, ul{ list-style-type:none}
+
+			.sakriven{
+				display: none;
+			}
+
+		</style>
+	</head>
+	<body>
+		<div id="proba1">ovo je PRVA poruka</div>
+		<div id="proba2">ovo je DRUGA poruka</div>
+	</body>
+	<script>
+
+		// document.querySelector('#proba1').addEventListener('mouseover', function(){
+		// 	document.querySelector('#proba1').classList.add('sakriven');
+		// 	document.querySelector('#proba2').classList.add('sakriven');  // ili className = 'sakriven';
+		// 	event.stopPropagation();
+		// })
+
+		var div1 = document.querySelector('#proba1');
+		var div2 = document.querySelector('#proba2');
+
+        div1.addEventListener('mouseover', function(event){
+            if(div1.classList.contains('sakriven')){
+                div1.classList.remove('sakriven');
+				div2.classList.add('sakriven');
+            }else{
+           	 // event.stopPropagation();
+                div1.classList.add('sakriven');
+				div2.classList.remove('sakriven');
+            }
+        });
+		window.addEventListener('mouseout', function(){
+            div1.classList.remove('sakriven');
+			  
+        });
+			
+		</script>
+</html>

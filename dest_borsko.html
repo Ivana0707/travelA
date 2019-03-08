@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,height=device-height, initial-scale=1">
+        <link  id="favicon" href="/slike/bajk.jpg" rel="shortcut icon" type="image/x-icon"  />
+		<title>PUTOVANJA</title>
+		<style>
+			@import url('https://fonts.googleapis.com/css?family=Gloria+Hallelujah');
+			@import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
+			@import url('https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Kalam|Kaushan+Script|Permanent+Marker');
+			@import url('https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Kalam|Kaushan+Script|Permanent+Marker|Shojumaru');
+		/*  reset styles */
+		html, body{ width:100%; height:100%; margin:0; padding:0; background-color:#FEFFEC; }
+			body *{ margin:0; padding:0; box-sizing:border-box; 
+			/* font-family: 'Permanent Marker', cursive; */
+			/* font-family: 'Gloria Hallelujah', cursive; */
+			/* font-family: 'Shojumaru', cursive; */
+			/* font-family: 'Kaushan Script', cursive; */
+			/* font-family: 'Shojumaru', cursive; */
+			}
+			a{ text-decoration:none;}
+			ol, ul{ list-style-type:none}
+			header{
+				display:grid;
+				height: 10vh;
+				grid-template-columns: 1fr 500px 1fr;
+				font-family: 'Shojumaru', cursive;
+			}
+			.sitelogo{
+				line-height: 10vh; height: 10vh;
+				position: relative; 
+				font-size: 3vw;  /*vw da bi se smanjivala sa velicinom ekrana*/
+				font-family: 'Shojumaru', cursive;
+			}
+			img#logo2{
+				height:10vh; height: 50px;
+				/* padding: 0; */
+				 /* margin-left:5%; */
+			}
+			span.sitename{
+				position: absolute;  left:0; width:100%; height:100%;
+				/* text-align:center;  */
+				font-family: 'Shojumaru', cursive;
+				/* top: 50%; transform: translate(0, -50%); */
+				}
+			span.sitename a{
+				/* color:#583428 */
+				color:#594C46;
+			}
+			ul {
+				grid-area: 1/3/2/4;
+				display:flex; flex-direction: row; justify-content: space-evenly; 
+				align-items: center;
+				font-family: 'Kaushan Script', cursive;
+			}
+			ul li:hover{
+				text-transform: uppercase;
+			}
+			section{
+				display: flex; flex-wrap: wrap;
+				line-height:2em;
+				 /* position: relative; */
+			}
+			div#opis{
+				/* border: 1px solid black; */
+				width: 50%; padding: 3%; 
+				margin-top: 5%;
+				/* margin-bottom: 5%; */
+			}
+			h1{
+				margin-bottom: 5%;
+				text-indent:5%;
+			}
+			div#slika1{
+				/* border: 1px solid black; */
+				margin-top: 5%;
+				 padding: 3%;
+				width: 50%;
+				 height: 100%;
+				display:flex; flex-wrap: wrap;
+				justify-content: center;
+				overflow-y: scroll;
+			}
+			div#slika1 > div{
+				width:40%; height: 25vh; 
+				 /* border: 1px solid black; */
+				background-repeat: no-repeat; background-size: cover; background-position: center;
+				margin:2%; box-shadow: 4px 4px 9px rgb(163, 163, 160);
+				transition: all .3s; 
+				border-radius: 5px;
+			}
+			div#slika1 > div:hover{
+				box-shadow: -4px -4px 9px rgb(163, 163, 160);
+				transform: scale(1.6); z-index: 5;
+			}
+			div#slika1 div:nth-child(1){	background-image: url('slike/borsko1.jpg'); margin:none;	}
+			div#slika1 div:nth-child(2){	background-image: url('slike/borsko2.jpg'); margin:none;	}
+			div#slika1 div:nth-child(3){	background-image: url('slike/borsko3.jpg');	}
+			div#slika1 div:nth-child(4){	background-image: url('slike/borsko4.jpg');	}
+			div#slika1 div:nth-child(5){	background-image: url('slike/borsko5.jpg');	}
+			div#slika1 div:nth-child(6){	background-image: url('slike/borsko6.jpg');	}
+			div#slika1 div:nth-child(7){	background-image: url('slike/borsko7.jpg');	}
+			/* div#slika1 div:nth-child(8){	background-image: url('slike/brda.jpg');	}
+			div#slika1 div:nth-child(9){	background-image: url('slike/brda.jpg');	}
+			div#slika1 div:nth-child(10){	background-image: url('slike/brda.jpg');	} */
+			form{
+				/* position: absolute; */
+				/* top: 25%; */
+				margin-left: 5%;
+				right: 50%;
+				margin-top: 10%
+			}
+			input.posalji{
+				display:block;
+				width:100%;
+				/* text-align: center; */
+			}
+			form div span{
+				display: inline-block; width:30%;
+				text-decoration: underline;
+			}
+			div input{
+				width:70%;
+			}
+			div#rez{
+				margin-left: 5%; 
+				margin-top: 10%;
+				font-style: italic;
+				/* position: absolute; */
+			}
+			a:link{color:#594C46;}
+			a:visited { color:#594C46;}  
+			a:hover{color:#594C46;}  
+			a:active { color:black; }
+
+		</style>
+	</head>
+	<body>
+		<header>
+			<!-- <div class='sitelogo'>
+				<img src='slike/logo2.png' alt='logo2' id='logo2'>
+				<span class='sitename'><a href ='pocetna_prva.html'>PUTOVANJA</a></span>
+			</div> -->
+			<div class='sitelogo'>
+				<span class='sitename'><a href ='pocetna_prva.html'>PU<img src='slike/logo2.png' alt='logo2' id='logo2'>OVANJA</a></span>
+			</div>
+			<ul id="glavni_meni">
+					<li><a href ='pocetna_prva.html' target='_blank'>početak</a></li>
+					<li><a href ='galerija_sve.html' target='_blank'>destinacije</a></li>
+					<li><a href ='pitanja.html' target='_blank'>pitanja</a></li>
+					<li><a href ='kontakt.html' target='_blank'>kontakt</a></li>
+			</ul>
+		</header>
+			<section>
+				<div id='opis'>
+					<h1>Borsko jezero</h1>
+					Borsko jezero nalazi se u istočnom delu Srbije, na 17 km od grada Bora, u podnožju planine Crni Vrh. Jezero se nalazi na nadmorskoj visini od 438 metara. Ima površinu od 30 hektara, najveća dubina mu je 48 metara. Temperatura vode u letnjim mesecima dostiže 25 stepeni celzijusa, što je idealna temperatura za kupanje. U vreme maksimalnog vodostaja u jezero staje 12 miliona kubnih metara vode. Obala jezera je sitno razuđena i stenovita.
+
+Borsko jezero je veštačko jezero nastalo 1959 . godine podizanjem brane i akomulacijom voda iz rečice Valja Žoni, Marecove reke i dela sliva Zlotske reke. Prvenstveno, jezero je bilo namenjeno za pogone Rudarsko – topioničarskog basena, kao i za turističke potrebe.Borsko jezero je okruženo listopadnim i četinarskim šumama, zelenim proplanicma i livadama. Svake godine u vode jezera se ubacuje nekoliko tona riblje mlađi, sa ciljem da se obogati i poveća riblji fond. Borsko jezero je idealno za ribolov. U jezero se ulivaju čiste planinske vode, a redovna poribljavanja čine ga pogodnim staništem za veliki broj ribljih vrsta. Ovde borave : šaran, deverika, som, smuđ, bandar, amur, tostolobik, kao i sve vrste bele ribe. Na obalzi Borskog jezera nalaze se četiri veće plaže i veliki broj manjih. Najposećenije su Glavna plaža, Tropski bar, Savača, kao i plaža u kampu. Najinteresantniji sadržaji na vodi uglavnom su na Glavnoj plaži, dok plažu Tropski bar najčešće posećuju turisti mlađih generacija. Sportistima je na raspolaganju kompleks sportskih terena kod hotela Jezero. Kompleks poseduje terene za košarku, fudbal, rukomet, odbojku, tenis i odbojku na pesku. Za ljubitelje šetnje ili vožnje bicikla obezbeđene su trim staze oko celog jezera. Staze polaze od plaže Tropski bar, pored hotela Jezero, Glavne plaže, hotela Metalurg, auto kampa, kroz listopadne i četinarske šume, pašnjake i livade, da bi se završile kod brane . Na Glavnoj plaži omogućeno je iznajmljivanje čamaca i pedalina, kao i korišćenje drugih sadržaja na vodi. U hotelu Jezero gostima su na raspolaganju moderna kuglana, bilijar sala, karaoke soba, sauna, frizerski salon, kao i razni drugi uslužni i zabavni sadržaji.
+					<form>
+						<!-- <fieldset> -->
+							<div><span>ime i prezime</span><input type="text" id="ime_prezime" ></div>
+							<div><span>broj osoba</span><input type="number" id="broj_osoba"></div>
+							<div><span>e-mail</span><input type="email" id="mail"></div>
+							<div><span>Polazak:</span><select id="polazak">
+								<option value="1">25.05.2019.</option>
+								<option value="2">15.06.2019.</option>
+								<option value="3">10.07.2019.</option>
+								<option value="4">05.08.2019.</option>
+							</select>
+							</div>
+							<input type="submit" value="Rezervisi" class="posalji" />
+						<!-- </fieldset> -->
+					</form>
+					<div id="rez"> </div>
+				</div>
+				<div id='slika1'>
+					<div class="slika"></div>
+					<div class="slika"></div>
+					<div class="slika"></div>
+					<div class="slika"></div>
+					<div class="slika"></div>
+					<div class="slika"></div>
+					<div class="slika"></div>
+					<!-- <div class="slika"></div>
+					<div class="slika"></div> -->
+				</div>
+
+				
+			</section>
+			
+			
+	</body>
+	<script>
+		function snimi(putnik){
+			var ls_putnik;
+			if (localStorage.getItem('putnik') == null){
+				ls_putnik = [];
+			} else {
+				ls_putnik = JSON.parse(localStorage.getItem('putnik'));
+			} 
+			ls_putnik.push(putnik);
+			localStorage.setItem('putnik', JSON.stringify(ls_putnik));
+		}
+
+		document.querySelector('.posalji').addEventListener('click', function(e){
+			e.preventDefault();
+			var ime_prezime = document.querySelector('#ime_prezime').value;  //da procitamo iz inputa
+			var broj_osoba = document.querySelector('#broj_osoba').value;
+			var mail = document.querySelector('#mail').value;			
+			var opcija = parseInt(document.querySelector('#polazak').value);
+			var datum_polaska;
+			switch(opcija){
+				case 1: datum_polaska = '25.05.2019.';break;
+				case 2: datum_polaska = '15.06.2019.';break;
+				case 3: datum_polaska = '10.07.2019.';break;
+				case 4: datum_polaska = '05.08.2019.';break;
+				default: datum_polaska = '25.05.2019.' ;
+			}
+
+			document.querySelector("#rez").innerHTML = ('Ime i prezime: ' + ime_prezime + "<br>" + 'Broj osoba: ' + broj_osoba + '<br>' + 'e-mail: ' + mail + "<br>" + 'Polazak: ' + datum_polaska);
+
+			var putnik = [{
+				ime:ime_prezime,
+				broj:broj_osoba,
+				mail:mail,
+				datum:datum_polaska
+			}];
+			snimi(putnik);
+
+		});
+
+	</script>
+</html>
