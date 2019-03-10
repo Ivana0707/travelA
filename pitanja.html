@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width,height=device-height, initial-scale=1">
-        <link  id="favicon" href="/slike/bajk.jpg" rel="shortcut icon" type="image/x-icon"  />
+        <link  id="favicon" href="slike/logo2.png" rel="shortcut icon" type="image/x-icon"  />
 		<title>PUTOVANJA</title>
 		<style>
 			@import url('https://fonts.googleapis.com/css?family=Gloria+Hallelujah');
@@ -24,7 +24,7 @@
 			header{
 				display:grid;
 				height: 10vh;
-				grid-template-columns: 1fr 500px 1fr;
+				grid-template-columns: 1fr 400px 1fr;
 				font-family: 'Shojumaru', cursive;
 			}
 			.sitelogo{
@@ -32,6 +32,7 @@
 				position: relative; 
 				font-size: 3vw;  /*vw da bi se smanjivala sa velicinom ekrana*/
 				font-family: 'Shojumaru', cursive;
+				margin-left: 3%;
 			}
 			img#logo2{
 				height:10vh; height: 50px;
@@ -69,43 +70,7 @@
 			ul li:hover{
 				text-transform: uppercase;
 			}
-		/*	div#opcije{
-				background-color: rgba(192, 183, 183, 0.466);
-				border-radius: 30px;
-				font-size: 2em;
-				font-family: 'Kaushan Script', cursive;
-				padding:0 5%;
-				box-shadow:4px 4px 30px rgba(192, 183, 183, 0.842),-4px -4px 30px rgba(192, 183, 183, 0.842);
-				animation-name: pojavise;  
-				animation-duration: 2s; 
-				animation-timing-function: ease-out; 	
-				animation-fill-mode:forwards;
-				animation-delay: 0;  
-				animation-play-state: running;
-			}
-			@keyframes pojavise {	
-				0% {opacity:0;}		
-				100% {opacity:1;} 
-			}
-			div.ime_drzave{
-				display: inline-block;
-				width: 120px; height: 2em;
-				background-color: rgba(192, 183, 183, 0.466);
-				text-align: center; line-height: 2em;
-				font-size: 1em;
-			}
-			.sakriven{
-				display: none;
-			}
-			div.ime_drzave:hover{
-				background-color: rgba(192, 183, 183, 0.096);
-				text-shadow:2px 2px 3px white, -2px -2px 3px white, -2px 2px 3px white, 2px -2px 3px white;
-				font-size: 1em;
-			} */
-			a{ 
-				display: block;
-				text-align: center;
-			}
+			a{ display: block; text-align: left; }
 			a:link{color:#594C46;}
 			a:visited { color:#594C46;}  
 			a:hover{color:#594C46;}  
@@ -136,8 +101,9 @@
 			
 			<ul id="glavni_meni">
 				<li><a href ='pocetna_prva.html' target='_blank'>početak</a></li>
-				<li><a href ='galerija_sve.html' target='_blank'>destinacije</a></li>
+				<li><a href ='destinacije.html' target='_blank'>destinacije</a></li>
 				<li><a href ='pitanja.html' target='_blank'>pitanja</a></li>
+				<li><a href ='rezervacije.html' target='_blank'>pregled rezervacija</a></li>
 				<li><a href ='kontakt.html' target='_blank'>kontakt</a></li>
 			</ul>
 		</header>

@@ -3,13 +3,15 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width,height=device-height, initial-scale=1">
-        <link  id="favicon" href="/slike/bajk.jpg" rel="shortcut icon" type="image/x-icon"  />
+        <link  id="favicon" href="slike/logo2.png" rel="shortcut icon" type="image/x-icon"  />
 		<title>PUTOVANJA</title>
 		<style>
 			@import url('https://fonts.googleapis.com/css?family=Gloria+Hallelujah');
 			@import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
 			@import url('https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Kalam|Kaushan+Script|Permanent+Marker');
 			@import url('https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Kalam|Kaushan+Script|Permanent+Marker|Shojumaru');
+			@import url('https://fonts.googleapis.com/css?family=Amatic+SC|Cinzel');
+			@import url('https://fonts.googleapis.com/css?family=Amatic+SC|Handlee|Poiret+One');
 		/*  reset styles */
 		html, body{ width:100%; height:100%; margin:0; padding:0; background-color:#FEFFEC; }
 			body *{ margin:0; padding:0; box-sizing:border-box; 
@@ -24,7 +26,7 @@
 			header{
 				display:grid;
 				height: 10vh;
-				grid-template-columns: 1fr 500px 1fr;
+				grid-template-columns: 1fr 400px 1fr;
 				font-family: 'Shojumaru', cursive;
 			}
 			.sitelogo{
@@ -32,6 +34,7 @@
 				position: relative; 
 				font-size: 3vw;  /*vw da bi se smanjivala sa velicinom ekrana*/
 				font-family: 'Shojumaru', cursive;
+				margin-left: 3%;
 			}
 			img#logo2{
 				height:10vh; height: 50px;
@@ -47,6 +50,8 @@
 			span.sitename a{
 				/* color:#583428 */
 				color:#594C46;
+				display:block;
+				text-align: left;
 			}
 			ul {
 				grid-area: 1/3/2/4;
@@ -67,10 +72,15 @@
 			div#sidebar{
 				/* border: 1px solid black; */
 				padding: 10px;
+				font-family: 'Handlee', cursive;
 				/* background-image:url('slike/pocetna2.jpg');
 				background-repeat: no-repeat; background-size: cover; background-position: 0 0; */
 			}
-
+			#pretraga{ 
+				font-family: 'Handlee', cursive; 
+				font-size: 1em;
+				padding: 2%;
+			}
 			div.galerija{
 				display: flex; flex-wrap: wrap;
 				justify-content: center;
@@ -80,9 +90,7 @@
 				box-shadow: 4px 4px 9px rgb(163, 163, 160);
 				position: relative; float: left; margin: 10px;
 			}
-			div.destinacija:hover{
-				box-shadow: -4px -4px 9px rgb(163, 163, 160);
-			}
+			div.destinacija:hover{ box-shadow: -4px -4px 9px rgb(163, 163, 160); }
 			div.destinacija img{
 				width:100%; height: auto;
 			}
@@ -94,46 +102,46 @@
 				/* background-color:#CFA18A; */
 				color: rgb(131, 129, 128);
 			}
-			div.nazivSlike:hover{
-				background-color: white; 
+			div.nazivSlike:hover{ background-color: white; }
+			a{ 
+				display: block; 
+				text-align: center; 
 			}
-			a{ display: block; text-align: center; }
-			a.link:link{ text-transform: uppercase; }
+			a.link:link{ 
+				text-transform: uppercase; 
+				font-family: 'Kaushan Script', cursive;
+				font-size: 20px;
+			}
 			a.link:hover{ text-decoration: overline; }
+			a.tip{ font-family: 'Handlee', cursive; }
 			a:link{ color:#594C46; }
 			a:visited { color:#594C46; }  
 			a:hover{ color:#594C46; }  
-			a:active { color:black; }                                    /* selektovani link */
+			a:active { color:black; }      
+			                        
 		</style>
 	</head>
 	<body>
 		<header>
-			<!-- <div class='sitelogo'>
-				<img src='slike/logo2.png' alt='logo2' id='logo2'>
-				<span class='sitename'><a href ='pocetna_prva.html'>PUTOVANJA</a></span>
-			</div> -->
 			<div class='sitelogo'>
 				<span class='sitename'><a href ='pocetna_prva.html'>PU<img src='slike/logo2.png' alt='logo2' id='logo2'>OVANJA</a></span>
 			</div>
 			<ul id="glavni_meni">
-					<li><a href ='pocetna_prva.html' target='_blank'>početak</a></li>
-					<li><a href ='galerija_sve.html' target='_blank'>destinacije</a></li>
-					<li><a href ='pitanja.html' target='_blank'>pitanja</a></li>
-					<li><a href ='kontakt.html' target='_blank'>kontakt</a></li>
+				<li><a href ='pocetna_prva.html' target='_blank'>početak</a></li>
+				<li><a href ='destinacije.html' target='_blank'>destinacije</a></li>
+				<li><a href ='pitanja.html' target='_blank'>pitanja</a></li>
+				<li><a href ='rezervacije.html' target='_blank'>pregled rezervacija</a></li>
+				<li><a href ='kontakt.html' target='_blank'>kontakt</a></li>
 			</ul>
 		</header>
 		<div class="container">
 			<div id='sidebar'>
-					<input id='search' type="text"><button id='pretraga'>pretrazi</button>
+					<input id='search' type="text"><button id='pretraga'>pretraga</button>
 				<div id='filteri'>
-					<!-- <label><input type="checkbox" name="c1" id="c1" /><span>letovanje</span></label><br>
-					<label><input type="checkbox" name="c1" id="c2" /><span>zimovanje </span></label><br>
-					<label><input type="checkbox" name="c1" id="c3" /><span>vikend putovanje</span></label> -->
-					<label><input type="radio" name="c1" id="c0" value="" checked/><span>prikazi sve</span></label><br>
+					<label><input type="radio" name="c1" id="c0" value="" checked/><span>sve destinacije</span></label><br>
 					<label><input type="radio" name="c1" id="c1" value="letovanje"/><span>letovanje</span></label><br>
 					<label><input type="radio" name="c1" id="c2" value="zimovanje" /><span>zimovanje </span></label><br>
 					<label><input type="radio" name="c1" id="c3" value="vikend" /><span>vikend putovanje</span></label>
-
 				</div>
 				
 			</div>
@@ -149,10 +157,8 @@
 				{ tip: 'letovanje', drzava: 'Grčka', mesto: 'Halkidiki - Pefkohori', trajanje: '10 dana', cena: '15000 rsd', slika:'slike/pefkohori8.jpg', destlink:'dest_pefkohori.html'},
 				{ tip: 'letovanje', drzava: 'Grčka', mesto: 'Halkidiki - Potidea', trajanje: '10 dana', cena: '20000 rsd', slika:'slike/potidea1.jpg', destlink:'dest_potidea.html'},
 				{ tip: 'letovanje', drzava: 'Grčka', mesto: 'Egina - Agia Marina', trajanje: '15 dana', cena: '30000 rsd', slika:'slike/egina9.jpg', destlink:'dest_egina.html'},
-				// { tip: 'vikend putovanje', drzava: 'Bugarska', mesto: 'Rila - Paničište', trajanje: '3 dana', cena: '8000 rsd', slika:'slike/brda.jpg', destlink:'dest_perucac.html'},
-				{ tip: 'vikend putovanje', drzava: 'Srbija', mesto: 'Zlatar', trajanje: '3 dana', cena: '4000 rsd', slika:'slike/zlatar1.jpg', destlink:'dest_zlatar.html'},
-				{ tip: 'zimovanje', drzava: 'Srbija', mesto: 'Zlatar', trajanje: '10 dana', cena: '15000 rsd', slika:'slike/zlatar6.jpg', destlink:'dest_zlatar.html'},
-				// { tip: 'vikend putovanje', drzava: 'Rumunija', mesto: 'Transalpina', trajanje: '3 dana', cena: '7000 rsd', slika:'slike/brda.jpg', destlink:'dest_perucac.html'},
+				{ tip: 'vikend putovanje', drzava: 'Srbija', mesto: 'Planina Zlatar', trajanje: '3 dana', cena: '4000 rsd', slika:'slike/zlatar1.jpg', destlink:'dest_zlatar.html'},
+				{ tip: 'zimovanje', drzava: 'Srbija', mesto: 'Planina Zlatar', trajanje: '10 dana', cena: '15000 rsd', slika:'slike/zlatar6.jpg', destlink:'dest_zlatar.html'},
 				{ tip: 'zimovanje', drzava: 'Grčka', mesto: 'Planina Olimp', trajanje: '7 dana', cena: '15000 rsd', slika:'slike/olimp1.jpg', destlink:'dest_olimp.html'},
 				{ tip: 'letovanje', drzava: 'Grčka', mesto: 'Sivota', trajanje: '10 dana', cena: '5000 rsd', slika:'slike/sivota10.jpg', destlink:'dest_sivota.html'},
 				{ tip: 'vikend putovanje', drzava: 'Srbija', mesto: 'Borsko jezero', trajanje: '3 dana', cena: '6000 rsd', slika:'slike/borsko6.jpg', destlink:'dest_borsko.html'}
@@ -208,7 +214,7 @@
 
 			var link2 = document.createElement("a");
 			link2.href = '#';
-			link1.classList.add("tip"); 
+			link2.classList.add("tip"); 
 			link2.innerHTML = dest.tip;
 			naziv.appendChild(link2);
 			return novi_div;
