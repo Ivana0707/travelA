@@ -1,46 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width,height=device-height, initial-scale=1">
-        <link  id="favicon" href="slike/logo2.png" rel="shortcut icon" type="image/x-icon"  />
-		<title>PUTOVANJA</title>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<link  id="favicon" href="slike/logo2.png" rel="shortcut icon" type="image/x-icon"  />
+		<title>DESTINACIJE</title>
 		<style>
-			@import url('https://fonts.googleapis.com/css?family=Gloria+Hallelujah');
-			@import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
-			@import url('https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Kalam|Kaushan+Script|Permanent+Marker');
+			@import url('https://fonts.googleapis.com/css?family=Montserrat');
 			@import url('https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Kalam|Kaushan+Script|Permanent+Marker|Shojumaru');
-			@import url('https://fonts.googleapis.com/css?family=Amatic+SC|Cinzel');
 			@import url('https://fonts.googleapis.com/css?family=Amatic+SC|Handlee|Poiret+One');
 		/*  reset styles */
-		html, body{ width:100%; height:100%; margin:0; padding:0; background-color:#FEFFEC; }
-			body *{ margin:0; padding:0; box-sizing:border-box; 
-			/* font-family: 'Permanent Marker', cursive; */
-			/* font-family: 'Gloria Hallelujah', cursive; */
-			/* font-family: 'Shojumaru', cursive; */
-			/* font-family: 'Kaushan Script', cursive; */
-			/* font-family: 'Shojumaru', cursive; */
-			}
+			html, body{ width:100%; height:100%; margin:0; padding:0; }
+			body *{ margin:0; padding:0; box-sizing:border-box; }
 			a{ text-decoration:none; }
 			ol, ul{ list-style-type:none; }
+
+			html, body{ background-color:#FEFFEC; color:#594C46; }
 			header{
-				display:grid;
-				height: 10vh;
+				display: grid;
 				grid-template-columns: 1fr 400px 1fr;
+				height: 10vh;
 				font-family: 'Shojumaru', cursive;
 			}
 			.sitelogo{
+				position: relative;
 				line-height: 10vh; height: 10vh;
-				position: relative; 
 				font-size: 3vw; 
-				font-family: 'Shojumaru', cursive;
 				margin-left: 3%;
 			}
-			img#logo2{ height: 50px; } 
+			img#logo2{ height: 50px; }
 			span.sitename{
-				position: absolute;  left:0; width:100%; height:100%;
+				position: absolute;  
+				left: 0; 
+				width: 100%; height: 100%;
 				font-family: 'Shojumaru', cursive;
-				}
+			}
 			span.sitename a{
 				color:#594C46;
 				display:block;
@@ -48,62 +43,53 @@
 			}
 			ul{
 				grid-area: 1/3/2/4;
-				display:flex; flex-direction: row; justify-content: space-evenly; 
+				display: flex; flex-direction: row; justify-content: space-evenly; 
 				align-items: center;
 				font-family: 'Kaushan Script', cursive;
+				letter-spacing:1px;
 			}
 			ul li:hover{ text-transform: uppercase; }
 			div.container{
 				display: grid; 
 				grid-template-columns: 1fr 7fr;
-				/* border: 1px solid black; */
-				background-image:url('slike/gal2.jpg');
-				background-repeat: no-repeat; background-size: cover; background-position: center;
+				/* box-shadow:4px 4px 30px rgba(192, 183, 183, 0.842),-4px -4px 30px rgba(192, 183, 183, 0.842); */
 			}
-			div#sidebar{
-				padding: 15%;
-				/* font-family: 'Handlee', cursive; */
-				/* background-image:url('slike/pocetna2.jpg');
-				background-repeat: no-repeat; background-size: cover; background-position: 0 0; */
-			}
+			div#sidebar{ padding: 15%; }			
 			#pretraga, #search, #filteri{ 
 				font-family: 'Handlee', cursive; 
 				font-size: 1em;
-				padding: 2%;
 				margin-top:15%;
+				padding-top: 4%;
 			}
-			#pretraga{
-				margin-top:5%;
-			}
-			div.galerija{
-				display: flex; 
-				flex-wrap: wrap;
+			#pretraga{ margin-top:5%; }
+			div#galerija{
+				display: flex;  flex-wrap: wrap;
 				justify-content: center;
+				padding-top: 4%;
+			}
+			div#galerija.galerija1{
+				font-family: 'Handlee', cursive; 
+				/* font-size: 2em; */
+			}
+			div#sidebar.galerija1{
+				float:left;
 			}
 			div.destinacija{
+				position: relative; float: left;
 				width: 30%; 
+				margin: 10px;
 				box-shadow: 4px 4px 9px rgb(163, 163, 160);
-				position: relative; float: left; margin: 10px;
 			}
 			div.destinacija:hover{ box-shadow: -4px -4px 9px rgb(163, 163, 160); }
-			div.destinacija img{
-				width:100%; 
-				/* height: auto; */
-				height: 20vw;
-			}
+			div.destinacija img{ width: 100%;  height: 20vw; }
 			div.nazivSlike{
-				text-align: center; line-height: 2em;
+				text-align: center; 
+				line-height: 2em;
 				background-color: rgb(218, 202, 194);
-				/* background-color: #FEC66F; */
-				/* background-color: #CD9A83; */
-				/* background-color:#CFA18A; */
 				color: rgb(131, 129, 128);
 			}
 			div.nazivSlike:hover{ background-color: white; }
-			a{ 
-				display: block; 
-				text-align: center; 
-			}
+			a{ display: block; text-align: center; }
 			a.link:link{ 
 				text-transform: uppercase; 
 				font-family: 'Kaushan Script', cursive;
@@ -115,7 +101,6 @@
 			a:visited { color:#594C46; }  
 			a:hover{ color:#594C46; }  
 			a:active { color:black; }      
-			                        
 		</style>
 	</head>
 	<body>
@@ -123,10 +108,9 @@
 			<div class='sitelogo'>
 				<span class='sitename'><a href ='index.html'>PU<img src='slike/logo2.png' alt='logo2' id='logo2'>OVANJA</a></span>
 			</div>
-			<ul id="glavni_meni">
-				<li><a href ='ndex_prva.html' >početak</a></li>
+			<ul>
+				<li><a href ='index.html' >početak</a></li>
 				<li><a href ='destinacije.html' >destinacije</a></li>
-				<li><a href ='pitanja.html' >pitanja</a></li>
 				<li><a href ='rezervacije.html' >pregled rezervacija</a></li>
 				<li><a href ='kontakt.html' >kontakt</a></li>
 			</ul>
@@ -140,9 +124,8 @@
 					<label><input type="radio" name="c1" id="c2" value="zimovanje" /><span> zimovanje </span></label><br>
 					<label><input type="radio" name="c1" id="c3" value="vikend" /><span> vikend putovanje</span></label>
 				</div>
-				
 			</div>
-			<div class="galerija"></div>
+			<div id='galerija'></div>
 		</div>
 	</body>
 	<script>
@@ -152,7 +135,7 @@
 				{ tip: 'vikend putovanje', drzava: 'Srbija', mesto: 'Perućac', trajanje: '3 dana', cena: '5000 rsd', slika:'slike/perucac1.jpg', destlink:'dest_perucac.html'},
 				{ tip: 'letovanje', drzava: 'Grčka', mesto: 'Lefkada - Nikiana', trajanje: '15 dana', cena: '30000 rsd', slika:'slike/nikiana8.jpg', destlink:'dest_nikiana.html'},
 				{ tip: 'letovanje', drzava: 'Grčka', mesto: 'Halkidiki - Pefkohori', trajanje: '10 dana', cena: '15000 rsd', slika:'slike/pefkohori8.jpg', destlink:'dest_pefkohori.html'},
-				{ tip: 'letovanje', drzava: 'Grčka', mesto: 'Halkidiki - Potidea', trajanje: '10 dana', cena: '20000 rsd', slika:'slike/potidea1.jpg', destlink:'dest_potidea.html'},
+				// { tip: 'letovanje', drzava: 'Grčka', mesto: 'Halkidiki - Potidea', trajanje: '10 dana', cena: '20000 rsd', slika:'slike/potidea1.jpg', destlink:'dest_potidea.html'},
 				{ tip: 'letovanje', drzava: 'Grčka', mesto: 'Egina - Agia Marina', trajanje: '15 dana', cena: '30000 rsd', slika:'slike/egina9.jpg', destlink:'dest_egina.html'},
 				{ tip: 'vikend putovanje', drzava: 'Srbija', mesto: 'Planina Zlatar', trajanje: '3 dana', cena: '4000 rsd', slika:'slike/zlatar1.jpg', destlink:'dest_zlatar.html'},
 				{ tip: 'zimovanje', drzava: 'Srbija', mesto: 'Planina Zlatar', trajanje: '10 dana', cena: '15000 rsd', slika:'slike/zlatar6.jpg', destlink:'dest_zlatar.html'},
@@ -188,7 +171,7 @@
 			// link2.innerHTML = data.destinacije[i].tip;
 			// naziv.appendChild(link2);
 			sve_destinacije[i] = napravi_div_u_galeriji(data.destinacije[i]);
-			document.querySelector('.galerija').appendChild(sve_destinacije[i]);
+			document.querySelector('#galerija').appendChild(sve_destinacije[i]);
 		}
 		function napravi_div_u_galeriji(dest){
 			var novi_div = document.createElement('div');
@@ -219,23 +202,26 @@
 
 		function pretrazi(pret){
 			var d = pret;  // procitali
-			document.querySelector('.galerija').innerHTML = '';  // obrisali
+			document.querySelector('#galerija').innerHTML = '';  // obrisali
 			sve_destinacije = [];  // resetovali
 			var ind = -1;
 			for(var i = 0; i < data.destinacije.length; i++){
 				if (data.destinacije[i].mesto.toLowerCase().indexOf(d) > -1 || data.destinacije[i].drzava.toLowerCase().indexOf(d) > -1){
 					sve_destinacije[i] = napravi_div_u_galeriji(data.destinacije[i]);
-					document.querySelector('.galerija').appendChild(sve_destinacije[i]);
+					document.querySelector('#galerija').appendChild(sve_destinacije[i]);
 					ind = i;
 				}else
 					if(data.destinacije[i].tip.toLowerCase().indexOf(d) > -1 ){
 						sve_destinacije[i] = napravi_div_u_galeriji(data.destinacije[i]);
-						document.querySelector('.galerija').appendChild(sve_destinacije[i]);
+						document.querySelector('#galerija').appendChild(sve_destinacije[i]);
 						ind = i;
 					}
 			}
-			if (ind == -1)
-				document.querySelector('.galerija').innerHTML = "nema traženih rezultata";
+			if (ind == -1){
+				document.querySelector('#galerija').innerHTML = "za uneti pojam " + '"' + d + '"' + " nema rezultata pretrage";
+				document.querySelector('#galerija').setAttribute("class", "galerija1"); // dodala klasu, da bih sredila izgled 
+			}
+				
 		}
 		document.querySelector('#pretraga').onclick = function(){
 			pretrazi(document.querySelector('#search').value.toLowerCase());
@@ -273,7 +259,7 @@
 
 	    	if (document.querySelector("input[name='c1']:checked") !== null ){
                 neki = document.querySelector("input[name='c1']:checked").value;
-                document.querySelector('.galerija').innerHTML = '';
+                document.querySelector('#galerija').innerHTML = '';
             }
 
 			// var d = neki;  // procitali
@@ -294,9 +280,5 @@
 		// 	}
 		// }
 	});
-	
-
-	
-
 	</script>
 </html>

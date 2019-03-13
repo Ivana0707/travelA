@@ -4,101 +4,73 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width,height=device-height, initial-scale=1">
         <link  id="favicon" href="slike/logo2.png" rel="shortcut icon" type="image/x-icon"  />
-		<title>PUTOVANJA</title>
+		<title>KONTAKT</title>
 		<style>
-			@import url('https://fonts.googleapis.com/css?family=Gloria+Hallelujah');
-			@import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
 			@import url('https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Kalam|Kaushan+Script|Permanent+Marker');
 			@import url('https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Kalam|Kaushan+Script|Permanent+Marker|Shojumaru');
 		/*  reset styles */
 			html, body{ width:100%; height:100%; margin:0; padding:0; background-color:#FEFFEC; }
-			body *{ margin:0; padding:0; box-sizing:border-box; 
-			/* font-family: 'Permanent Marker', cursive; */
-			/* font-family: 'Gloria Hallelujah', cursive; */
-			/* font-family: 'Shojumaru', cursive; */
-			/* font-family: 'Kaushan Script', cursive; */
-			/* font-family: 'Shojumaru', cursive; */
-			}
+			body *{ margin:0; padding:0; box-sizing:border-box; }
 			a{ text-decoration:none;}
 			ol, ul{ list-style-type:none}
+
 			header{
-				display:grid;
-				height: 10vh;
+				display: grid;
 				grid-template-columns: 1fr 400px 1fr;
+				height: 10vh;
 				font-family: 'Shojumaru', cursive;
 			}
 			.sitelogo{
+				position: relative;
 				line-height: 10vh; height: 10vh;
-				position: relative; 
-				font-size: 3vw;  /*vw da bi se smanjivala sa velicinom ekrana*/
-				font-family: 'Shojumaru', cursive;
+				font-size: 3vw; 
 				margin-left: 3%;
 			}
-			img#logo2{
-				height:10vh; height: 50px;
-			}
+			img#logo2{ height: 50px; }
 			span.sitename{
-				position: absolute;  left:0; width:100%; height:100%;
+				position: absolute;  
+				left: 0; 
+				width: 100%; height: 100%;
 				font-family: 'Shojumaru', cursive;
-				}
-			span.sitename a{
-				color:#594C46;
 			}
+			span.sitename a{ color:#594C46; }
+			ul{
+				grid-area: 1/3/2/4;
+				display: flex; flex-direction: row; justify-content: space-evenly; 
+				align-items: center;
+				font-family: 'Kaushan Script', cursive;
+				letter-spacing:1px;
+			}
+			ul li:hover{ text-transform: uppercase; }
 			section#glavni{
 				height:80vh ;
 				background-image:url('slike/poc2.jpg');
 				background-repeat: no-repeat; background-size: cover; background-position: center;
+				/* box-shadow:4px 4px 30px rgba(192, 183, 183, 0.842),-4px -4px 30px rgba(192, 183, 183, 0.842); */
+
 			}
-			footer{
-				display:grid;
-				grid-template-columns: 1fr 200px 200px 1fr;
-				height: 10vh;
-			}
-			ul {
-				grid-area: 1/3/2/4;
-				display:flex; flex-direction: row; justify-content: space-evenly; 
-				align-items: center;
-				font-family: 'Kaushan Script', cursive;
-			}
-			ul li:hover{
-				text-transform: uppercase;
-			}
+			footer{ height: 10vh; }
 			a{ display: block; text-align: left; }
-			a:link{color:#594C46;}
-			a:visited { color:#594C46;}  
-			a:hover{color:#594C46;}  
+			a:link{color:#594C46; }
+			a:visited { color:#594C46; }  
+			a:hover{color:#594C46; }  
 			a:active { color:black; }
-			input, textarea, select{background-color: #FEFFEC;;}
-			form{
-				position: absolute;
-				margin-left: 5%;
-				right: 50%;
-				margin-top: 10%;
-				text-align: right;
-			}
-			input.posalji{
-				display:block;
-				width:20%;
-			}
+			input, textarea, select{ background-color: #FEFFEC;} 
 			div#kontakt{
 				position: absolute;
-				margin: 15%;
-				/* width: auto%; */
-				/* height: auto; */
-				/* border: 1px solid black; */
-				/* background-color: #f2f2f252; */
-				/* text-shadow: 0 0 30px  #f2f2f2fd; */
-				text-shadow: 0 0 30px #FFFFFF;
-				
+				padding: 2%;
+				margin: 10% 7%;
+				text-shadow: 0 0 30px rgb(255, 255, 255);
 				color: rgb(37, 32, 29);
-				font-weight:bold;
-				/* box-shadow: 5px 10px 10px #888888; */
-				/* box-shadow: 5px 5px 5px #888888; */
-				 /* -5px -5px 5px #eb3d3d,; */
-				/* box-shadow: 4px 4px 9px rgb(163, 163, 160); */
-				/* background-color: white; opacity: 0.2; */
+				font-size: 2vw ;
+				font-family: 'Kaushan Script', cursive;
+				/* -webkit-box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 8px 21px 2px rgba(0,0,0,0.2);  */
+				/* box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 8px 21px 2px rgba(0,0,0,0.2); */
+				box-shadow:4px 4px 30px rgba(192, 183, 183, 0.842),-4px -4px 30px rgba(192, 183, 183, 0.842);
+				border-radius: 10%;
+				background-color: rgba(254, 255, 236, 0.116);
 			}
-
+			#kontakt p a{ display: inline; }
 		</style>
 	</head>
 	<body>
@@ -106,19 +78,22 @@
 			<div class='sitelogo'>
 				<span class='sitename'><a href ='index.html'>PU<img src='slike/logo2.png' alt='logo2' id='logo2'>OVANJA</a></span>
 			</div>
-			
-			<ul id="glavni_meni">
+			<ul>
 				<li><a href ='index.html' >početak</a></li>
 				<li><a href ='destinacije.html' >destinacije</a></li>
-				<li><a href ='pitanja.html' >pitanja</a></li>
 				<li><a href ='rezervacije.html' >pregled rezervacija</a></li>
 				<li><a href ='kontakt.html' >kontakt</a></li>
 			</ul>
 		</header>
 		<section id='glavni'>
-			<div id="kontakt">Bla kl hlhgklsd lj;s skjlks j;sfj;s kj<br> lkahfa kjgfa <br> lkahfaf akga dj sjds fjhd skj sd</div>
+			<div id="kontakt">
+				<p>SVETOZARA MILETIĆA 87 B</p>
+				<p>26000 PANČEVO</p>
+				<p>tel/fax: 013 123 123</p>
+				<p>mobilni: 065/777 77 77</p>
+				<p>email: <a href="mailto:ifance77@gmail.com">ifance77@gmail.com</a></p>
+			</div>
 		</section>
 		<footer></footer>
 	</body>
-
 </html>
