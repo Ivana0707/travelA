@@ -1,0 +1,327 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Kalam|Kaushan+Script|Permanent+Marker|Shojumaru');
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC|Handlee|Poiret+One');
+/* reset styles */
+html, body{ width:100%; height:100%; margin:0; padding:0; background-color:#FEFFEC; }
+body *{ margin:0; padding:0; box-sizing:border-box; }
+a{ text-decoration:none;}
+ol, ul{ list-style-type:none}
+
+header{
+    display:grid;
+    height: 10vh;
+    grid-template-columns: 1fr 400px 1fr;
+    font-family: 'Shojumaru', cursive;
+}
+.sitelogo{
+    position: relative;
+    line-height: 10vh; height: 10vh;
+    font-size: 3vw; 
+    margin-left: 3%;
+}
+img#logo2{ height: 50px; }
+span.sitename{
+    position: absolute;  
+    left: 0; 
+    width: 100%; height: 100%;
+    font-family: 'Shojumaru', cursive;
+}
+span.sitename a{
+    color:#594C46;
+    display:block;
+    text-align: left;
+}
+ul{
+    grid-area: 1/3/2/4;
+    display: flex; flex-direction: row; justify-content: space-evenly; 
+    align-items: center;
+    font-family: 'Kaushan Script', cursive;
+    letter-spacing:1px;
+}
+ul li{ 
+    border-top: 1px solid transparent; /*da ga ne pomera na dole za 1px*/
+}
+ul li:hover{ border-top: 1px solid #594C46; }
+footer{ height: 10vh; }
+section#glavni{
+    display:grid;
+    height:80vh ;
+    background-image:url('slike/pocetna5.jpg');
+    background-repeat: no-repeat; background-size: cover; background-position: center;
+    justify-content: center; align-content: center;
+    /* box-shadow:4px 4px 30px rgba(192, 183, 183, 0.658),-4px -4px 30px rgba(192, 183, 183, 0.842); */
+}
+section#glavniR{
+    height: 80vh;
+    background-image:url('slike/pocetna6_1.jpg');
+    background-repeat: no-repeat; background-size: cover; background-position: center;
+    /* box-shadow:4px 4px 30px rgba(192, 183, 183, 0.842),-4px -4px 30px rgba(192, 183, 183, 0.842); */
+}
+section#glavniK{
+    height:80vh ;
+    background-image:url('slike/poc2.jpg');
+    background-repeat: no-repeat; background-size: cover; background-position: center;
+    /* box-shadow:4px 4px 30px rgba(192, 183, 183, 0.842),-4px -4px 30px rgba(192, 183, 183, 0.842); */
+}
+section#glavniD{
+    display: flex; flex-wrap: wrap;
+    line-height: 2em;
+    padding-top: 1%;
+}
+div#opis{
+    width: 45%; 
+    padding: 3%; 
+    padding-left: 5%;
+    text-align: justify;
+    font-family: 'Montserrat', sans-serif;
+}
+h1{
+    font-family: 'Kaushan Script', cursive;
+    font-variant: small-caps; 
+    margin-bottom: 5%;
+    text-indent: 10%;
+    text-decoration: overline;
+}
+div.slika1{
+    display: flex; flex-wrap: wrap;
+    width: 55%; height: 100%;
+    padding: 3%;
+    justify-content: center;
+}
+/* @media screen and (max-width: 900px){
+div.slika1{
+width: 55%;
+}
+} */
+div.slika1 > div{
+    width: 40%; height: 25vh; 
+    background-repeat: no-repeat; background-size: cover; background-position: center;
+    margin: 2%; 
+    box-shadow: 4px 4px 9px rgb(163, 163, 160);
+    transition: all .3s; 
+    border-radius: 5px;
+}
+div.slika1 > div:hover{
+    box-shadow: -4px -4px 30px #FEFFEC, 4px 4px 30px #FEFFEC;
+    transform: scale(1.6); z-index: 5;
+}
+form, select, input{ font-family: 'Handlee', cursive; }
+form, input{ font-size: 3vh; }
+form{
+    right: 50%;
+    margin: 10% 0 0 5%;
+}
+select{ font-weight: bold; }
+div#opis input.posalji{
+    display: block;
+    width:100%; height: 4vh;
+    margin-top: 2vh;
+    box-shadow: 4px 4px 9px rgb(163, 163, 160);
+    border:none;
+    border-radius: 5px;
+    background-color: #FEFFEC;
+}
+input.posalji:hover{
+    box-shadow: -4px -4px 9px rgb(163, 163, 160);
+    transform: scale(1.1); z-index: 5;
+    background-color: #594C46;
+    color: #FEFFEC;
+}
+form div span{
+    display: inline-block;
+    width:30%;
+    text-decoration: underline;
+}
+div#opis input{ width:70%; }
+div#rez{
+    margin: 5% 0 0 5%;
+    font-size: 24px;
+    font-family: 'Kaushan Script', cursive;
+}
+
+div#opcije{
+    background-color: rgba(192, 183, 183, 0.466);
+    border-radius: 30px;
+    font-size: 2em;
+    font-family: 'Kaushan Script', cursive;
+    padding:0 5%;
+    box-shadow:4px 4px 30px rgba(192, 183, 183, 0.842),-4px -4px 30px rgba(192, 183, 183, 0.842);
+    animation-name: pojavise;  
+    animation-duration: 2s; 
+    animation-timing-function: ease-out; 	
+    animation-fill-mode:forwards;
+    animation-delay: 0;  
+    animation-play-state: running;
+}
+@keyframes pojavise {	
+    0% {opacity:0;}		
+    100% {opacity:1;} 
+}
+div#opcije a{ color:rgb(73, 62, 58); }
+span a{ display: block; text-align: left; }/*mozda i ne mora zbog gornjeg*/
+a:link{ color:#594C46; }
+a:visited { color:#594C46; }  
+a:hover{ color:#594C46; }  
+a:active { color:black; }
+a{ display: block; text-align: center; }
+a.link:link{ 
+    text-transform: uppercase; 
+    font-family: 'Kaushan Script', cursive;
+    font-size: 20px;
+}
+a.link:hover{ text-decoration: overline; }
+a.tip{ font-family: 'Handlee', cursive; }
+div.container{
+    display: grid; 
+    grid-template-columns: 1fr 7fr;
+    /* box-shadow:4px 4px 30px rgba(192, 183, 183, 0.842),-4px -4px 30px rgba(192, 183, 183, 0.842); */
+}
+div#sidebar{ padding: 15%; }			
+#pretraga, #search, #filteri{ 
+    font-family: 'Handlee', cursive; 
+    font-size: 1em;
+    margin-top:15%;
+    padding-top: 4%;
+}
+#pretraga{ margin-top:5%; }
+div#galerija{
+    display: flex;  flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 4%;
+}
+div#galerija.galerija1{
+    font-family: 'Handlee', cursive; 
+    /* font-size: 2em; */
+}
+div#sidebar.galerija1{
+    float:left;
+}
+div.destinacija{
+    position: relative; float: left;
+    width: 30%; 
+    margin: 10px;
+    box-shadow: 4px 4px 9px rgb(163, 163, 160);
+}
+div.destinacija:hover{ box-shadow: -4px -4px 9px rgb(163, 163, 160); }
+div.destinacija img{ width: 100%;  height: 20vw; }
+div.nazivSlike{
+    text-align: center; 
+    line-height: 2em;
+    background-color: rgb(218, 202, 194);
+    color: rgb(131, 129, 128);
+}
+div.nazivSlike:hover{ background-color: white; }
+th.thBrisanje{ 
+    display: block;
+  text-align: center;
+}
+th, tr, td{ 
+  padding: 10px; 
+  font-family: 'Handlee', cursive; 
+  border-radius: 4px;
+}
+th{
+  background-color: rgba(88, 75, 69, 0.788);
+  color: #FEFFEC;
+  letter-spacing: 2px;
+}
+tr:nth-child(even){ background-color: #f2f2f228; }
+tr:nth-child(odd){ background-color: #f2f2f252; }
+a.obrisi{
+  font-weight: bold;
+  color:#FEFFEC;
+  letter-spacing: 2px;
+}
+table{
+  position: absolute;
+  margin:5%;                
+  /* height: 400px; 
+  overflow: scroll; */
+}
+/* input, textarea, select{ background-color: #FEFFEC;}  */
+div#kontakt{
+    position: absolute;
+    padding: 2%;
+    margin: 10% 7%;
+    text-shadow: 0 0 30px rgb(255, 255, 255);
+    color: rgb(37, 32, 29);
+    font-size: 2vw ;
+    font-family: 'Kaushan Script', cursive;
+    /* -webkit-box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 8px 21px 2px rgba(0,0,0,0.2);  */
+    /* box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 8px 21px 2px rgba(0,0,0,0.2); */
+    box-shadow:4px 4px 30px rgba(192, 183, 183, 0.842),-4px -4px 30px rgba(192, 183, 183, 0.842);
+    border-radius: 10%;
+    background-color: rgba(254, 255, 236, 0.116);
+}
+#kontakt p a{ display: inline; }
+
+div#borsko.slika1 div:nth-child(1){ background-image: url('slike/borsko1.jpg'); }
+div#borsko.slika1 div:nth-child(2){ background-image: url('slike/borsko2.jpg'); }
+div#borsko.slika1 div:nth-child(3){ background-image: url('slike/borsko3.jpg'); }
+div#borsko.slika1 div:nth-child(4){ background-image: url('slike/borsko4.jpg'); }
+div#borsko.slika1 div:nth-child(5){ background-image: url('slike/borsko5.jpg'); }
+div#borsko.slika1 div:nth-child(6){ background-image: url('slike/borsko6.jpg'); }
+div#borsko.slika1 div:nth-child(7){ background-image: url('slike/borsko7.jpg'); }
+
+div#egina.slika1 div:nth-child(1){ background-image: url('slike/egina1.jpg'); }
+div#egina.slika1 div:nth-child(2){ background-image: url('slike/egina10.jpeg'); }
+div#egina.slika1 div:nth-child(3){ background-image: url('slike/egina3.jpg');	}
+div#egina.slika1 div:nth-child(4){ background-image: url('slike/egina4.jpg');	}
+div#egina.slika1 div:nth-child(5){ background-image: url('slike/egina9.jpg');	}
+div#egina.slika1 div:nth-child(6){ background-image: url('slike/egina6.jpg');	}
+div#egina.slika1 div:nth-child(7){ background-image: url('slike/egina7.jpg');	}
+div#egina.slika1 div:nth-child(8){ background-image: url('slike/egina8.jpg');	}
+
+div#nikiana.slika1 div:nth-child(1){ background-image: url('slike/nikiana6.jpg'); }
+div#nikiana.slika1 div:nth-child(2){ background-image: url('slike/nikiana8.jpg'); }
+div#nikiana.slika1 div:nth-child(3){ background-image: url('slike/nikiana4.jpg'); }
+div#nikiana.slika1 div:nth-child(4){ background-image: url('slike/nikiana7.jpg'); }
+div#nikiana.slika1 div:nth-child(5){ background-image: url('slike/nikiana5.jpg'); }
+div#nikiana.slika1 div:nth-child(6){ background-image: url('slike/nikiana3.jpg'); }
+div#nikiana.slika1 div:nth-child(7){ background-image: url('slike/nikiana1.jpg'); }
+div#nikiana.slika1 div:nth-child(8){ background-image: url('slike/nikiana2.jpg'); }
+
+div#olimp.slika1 div:nth-child(1){ background-image: url('slike/olimp1.jpg'); }
+div#olimp.slika1 div:nth-child(2){ background-image: url('slike/olimp2.jpg'); }
+div#olimp.slika1 div:nth-child(3){ background-image: url('slike/olimp8.jpg'); }
+div#olimp.slika1 div:nth-child(4){ background-image: url('slike/olimp6.jpg'); }
+div#olimp.slika1 div:nth-child(5){ background-image: url('slike/olimp5.jpg'); }
+div#olimp.slika1 div:nth-child(6){ background-image: url('slike/olimp7.jpg'); }
+div#olimp.slika1 div:nth-child(7){ background-image: url('slike/olimp4.jpg'); }
+div#olimp.slika1 div:nth-child(8){ background-image: url('slike/olimp3.jpg'); }
+
+div#pefkohori.slika1 div:nth-child(1){ background-image: url('slike/pefkohori1.jpg'); }
+div#pefkohori.slika1 div:nth-child(2){ background-image: url('slike/pefkohori8.jpg'); }
+div#pefkohori.slika1 div:nth-child(3){ background-image: url('slike/pefkohori3.jpg'); }
+div#pefkohori.slika1 div:nth-child(4){ background-image: url('slike/pefkohori7.jpg'); }
+div#pefkohori.slika1 div:nth-child(5){ background-image: url('slike/pefkohori5.jpg'); }
+div#pefkohori.slika1 div:nth-child(6){ background-image: url('slike/pefkohori6.jpg'); }
+div#pefkohori.slika1 div:nth-child(7){ background-image: url('slike/pefkohori4.jpg'); }
+div#pefkohori.slika1 div:nth-child(8){ background-image: url('slike/pefkohori2.jpg'); }
+
+div#perucac.slika1 div:nth-child(1){ background-image: url('slike/perucac1.jpg'); }
+div#perucac.slika1 div:nth-child(2){ background-image: url('slike/perucac2.jpg'); }
+div#perucac.slika1 div:nth-child(3){ background-image: url('slike/perucac3.jpg'); }
+div#perucac.slika1 div:nth-child(4){ background-image: url('slike/perucac4.jpg'); }
+div#perucac.slika1 div:nth-child(5){ background-image: url('slike/perucac5.jpg'); }
+div#perucac.slika1 div:nth-child(6){ background-image: url('slike/perucac6.jpg'); }
+div#perucac.slika1 div:nth-child(7){ background-image: url('slike/perucac7.jpg'); }
+
+div#sivota.slika1 div:nth-child(1){ background-image: url('slike/sivota10.jpg'); }
+div#sivota.slika1 div:nth-child(2){ background-image: url('slike/sivota11.jpg'); }
+div#sivota.slika1 div:nth-child(3){ background-image: url('slike/sivota3.jpg'); }
+div#sivota.slika1 div:nth-child(4){ background-image: url('slike/sivota7.jpg'); }
+div#sivota.slika1 div:nth-child(5){ background-image: url('slike/sivota2.jpg'); }
+div#sivota.slika1 div:nth-child(6){ background-image: url('slike/sivota6.jpg'); }
+div#sivota.slika1 div:nth-child(7){ background-image: url('slike/sivota4.jpg'); }
+div#sivota.slika1 div:nth-child(8){ background-image: url('slike/sivota8.jpg'); }
+div#sivota.slika1 div:nth-child(9){ background-image: url('slike/sivota9.jpg'); }
+div#sivota.slika1 div:nth-child(10){ background-image: url('slike/sivota1.jpg'); }
+
+div#zlatar.slika1 div:nth-child(1){ background-image: url('slike/zlatar1.jpg'); }
+div#zlatar.slika1 div:nth-child(2){ background-image: url('slike/zlatar2.jpg'); }
+div#zlatar.slika1 div:nth-child(3){ background-image: url('slike/zlatar3.jpg'); }
+div#zlatar.slika1 div:nth-child(4){ background-image: url('slike/zlatar4.jpg'); }
+div#zlatar.slika1 div:nth-child(5){ background-image: url('slike/zlatar5.jpg'); }
+div#zlatar.slika1 div:nth-child(6){ background-image: url('slike/zlatar6.jpg'); }
+div#zlatar.slika1 div:nth-child(7){ background-image: url('slike/zlatar7.jpg'); }

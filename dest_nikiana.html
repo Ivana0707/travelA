@@ -5,134 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link  id="favicon" href="slike/logo2.png" rel="shortcut icon" type="image/x-icon"  />
-        <title>PUTOVANJA</title>
-        <style>
-            @import url('https://fonts.googleapis.com/css?family=Montserrat');
-            @import url('https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Kalam|Kaushan+Script|Permanent+Marker|Shojumaru');
-            @import url('https://fonts.googleapis.com/css?family=Amatic+SC|Handlee|Poiret+One');
-        /*  reset styles */
-            html, body{ width:100%; height:100%; margin:0; padding:0; }
-            body *{ margin:0; padding:0; box-sizing:border-box; }
-            a{ text-decoration:none; }
-            ol, ul{ list-style-type:none; }
-
-            html, body{ background-color:#FEFFEC; color:#594C46; }
-            header{
-                display: grid;
-                grid-template-columns: 1fr 400px 1fr;
-                height: 10vh;
-                font-family: 'Shojumaru', cursive;
-            }
-            .sitelogo{
-                position: relative;
-                line-height: 10vh; height: 10vh;
-                font-size: 3vw; 
-                margin-left: 3%;
-            }
-            img#logo2{ height: 50px; }
-            span.sitename{
-                position: absolute;  
-                left: 0; 
-                width: 100%; height: 100%;
-                font-family: 'Shojumaru', cursive;
-            }
-            ul{
-                grid-area: 1/3/2/4;
-                display: flex; flex-direction: row; justify-content: space-evenly; 
-                align-items: center;
-                font-family: 'Kaushan Script', cursive;
-                letter-spacing:1px;
-            }
-            ul li:hover{ text-transform: uppercase; }
-            section{
-                display: flex; flex-wrap: wrap;
-                line-height: 2em;
-                padding-top: 1%;
-            }
-            div#opis{
-                width: 45%; 
-                padding: 3%; 
-                padding-left: 5%;
-                text-align: justify;
-                font-family: 'Montserrat', sans-serif;
-            }
-            h1{
-                font-family: 'Kaushan Script', cursive;
-                font-variant: small-caps; 
-                margin-bottom: 5%;
-                text-indent: 10%;
-                text-decoration: overline;
-            }
-            div#slika1{
-                display: flex; flex-wrap: wrap;
-                width: 55%; height: 100%;
-                padding: 3%;
-                justify-content: center;
-            }
-        /* @media screen and (max-width: 900px){
-            div#slika1{
-            width: 55%;
-            }
-        } */
-            div#slika1 > div{
-                width: 40%; height: 25vh; 
-                background-repeat: no-repeat; background-size: cover; background-position: center;
-                margin: 2%; 
-                box-shadow: 4px 4px 9px rgb(163, 163, 160);
-                transition: all .3s; 
-                border-radius: 5px;
-            }
-            div#slika1 > div:hover{
-                box-shadow: -4px -4px 30px #FEFFEC, 4px 4px 30px #FEFFEC;
-                transform: scale(1.6); z-index: 5;
-            }
-            div#slika1 div:nth-child(1){ background-image: url('slike/nikiana6.jpg'); }
-			div#slika1 div:nth-child(2){ background-image: url('slike/nikiana8.jpg'); }
-			div#slika1 div:nth-child(3){ background-image: url('slike/nikiana4.jpg'); }
-			div#slika1 div:nth-child(4){ background-image: url('slike/nikiana7.jpg'); }
-			div#slika1 div:nth-child(5){ background-image: url('slike/nikiana5.jpg'); }
-			div#slika1 div:nth-child(6){ background-image: url('slike/nikiana3.jpg'); }
-			div#slika1 div:nth-child(7){ background-image: url('slike/nikiana1.jpg'); }
-			div#slika1 div:nth-child(8){ background-image: url('slike/nikiana2.jpg'); }
-            form, select, input{ font-family: 'Handlee', cursive; }
-            form, input{ font-size: 3vh; }
-            form{
-                right: 50%;
-                margin: 10% 0 0 5%;
-            }
-            select{ font-weight: bold; }
-            input.posalji{
-                display: block;
-                width:100%; height: 4vh;
-                margin-top: 2vh;
-                box-shadow: 4px 4px 9px rgb(163, 163, 160);
-                border:none;
-                border-radius: 5px;
-                background-color: #FEFFEC;
-            }
-            input.posalji:hover{
-                box-shadow: -4px -4px 9px rgb(163, 163, 160);
-                transform: scale(1.1); z-index: 5;
-                background-color: #594C46;
-                color: #FEFFEC;
-            }
-            form div span{
-                display: inline-block;
-                width:30%;
-                text-decoration: underline;
-            }
-            div input{ width:70%; }
-            div#rez{
-                margin: 5% 0 0 5%;
-                font-size: 24px;
-                font-family: 'Kaushan Script', cursive;
-            }
-            a{ display: block; text-align: left; }
-            a:link{ color:#594C46; }
-            a:visited { color:#594C46; }  
-            a:hover{ color:#594C46; }  
-            a:active { color:black; }
-        </style>
+        <title>NIKIANA, LEFKADA</title>
+        <link rel="stylesheet" type="text/css" href="stilovi.css" />
     </head>
 	<body>
 		<header>
@@ -167,7 +41,7 @@
                 </form>
                 <div id="rez"></div>
             </div>
-            <div id='slika1'>
+            <div id='nikiana' class='slika1'>
                 <div class="slika"></div>
                 <div class="slika"></div>
                 <div class="slika"></div>
