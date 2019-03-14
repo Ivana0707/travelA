@@ -39,7 +39,7 @@ ul{
     letter-spacing:1px;
 }
 ul li{ 
-    border-top: 1px solid transparent; /*da ga ne pomera na dole za 1px*/
+    border-top: 1px solid transparent;
 }
 ul li:hover{ border-top: 1px solid #594C46; }
 footer{ height: 10vh; }
@@ -49,19 +49,16 @@ section#glavni{
     background-image:url('slike/pocetna5.jpg');
     background-repeat: no-repeat; background-size: cover; background-position: center;
     justify-content: center; align-content: center;
-    /* box-shadow:4px 4px 30px rgba(192, 183, 183, 0.658),-4px -4px 30px rgba(192, 183, 183, 0.842); */
 }
 section#glavniR{
     height: 80vh;
     background-image:url('slike/pocetna6_1.jpg');
     background-repeat: no-repeat; background-size: cover; background-position: center;
-    /* box-shadow:4px 4px 30px rgba(192, 183, 183, 0.842),-4px -4px 30px rgba(192, 183, 183, 0.842); */
 }
 section#glavniK{
     height:80vh ;
     background-image:url('slike/poc2.jpg');
     background-repeat: no-repeat; background-size: cover; background-position: center;
-    /* box-shadow:4px 4px 30px rgba(192, 183, 183, 0.842),-4px -4px 30px rgba(192, 183, 183, 0.842); */
 }
 section#glavniD{
     display: flex; flex-wrap: wrap;
@@ -88,11 +85,6 @@ div.slika1{
     padding: 3%;
     justify-content: center;
 }
-/* @media screen and (max-width: 900px){
-div.slika1{
-width: 55%;
-}
-} */
 div.slika1 > div{
     width: 40%; height: 25vh; 
     background-repeat: no-repeat; background-size: cover; background-position: center;
@@ -157,7 +149,7 @@ div#opcije{
     100% {opacity:1;} 
 }
 div#opcije a{ color:rgb(73, 62, 58); }
-span a{ display: block; text-align: left; }/*mozda i ne mora zbog gornjeg*/
+span a{ display: block; text-align: left; }
 a:link{ color:#594C46; }
 a:visited { color:#594C46; }  
 a:hover{ color:#594C46; }  
@@ -173,7 +165,6 @@ a.tip{ font-family: 'Handlee', cursive; }
 div.container{
     display: grid; 
     grid-template-columns: 1fr 7fr;
-    /* box-shadow:4px 4px 30px rgba(192, 183, 183, 0.842),-4px -4px 30px rgba(192, 183, 183, 0.842); */
 }
 div#sidebar{ padding: 15%; }			
 #pretraga, #search, #filteri{ 
@@ -190,7 +181,6 @@ div#galerija{
 }
 div#galerija.galerija1{
     font-family: 'Handlee', cursive; 
-    /* font-size: 2em; */
 }
 div#sidebar.galerija1{
     float:left;
@@ -212,7 +202,7 @@ div.nazivSlike{
 div.nazivSlike:hover{ background-color: white; }
 th.thBrisanje{ 
     display: block;
-  text-align: center;
+    text-align: center;
 }
 th, tr, td{ 
   padding: 10px; 
@@ -234,10 +224,7 @@ a.obrisi{
 table{
   position: absolute;
   margin:5%;                
-  /* height: 400px; 
-  overflow: scroll; */
 }
-/* input, textarea, select{ background-color: #FEFFEC;}  */
 div#kontakt{
     position: absolute;
     padding: 2%;
@@ -246,8 +233,6 @@ div#kontakt{
     color: rgb(37, 32, 29);
     font-size: 2vw ;
     font-family: 'Kaushan Script', cursive;
-    /* -webkit-box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 8px 21px 2px rgba(0,0,0,0.2);  */
-    /* box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 8px 21px 2px rgba(0,0,0,0.2); */
     box-shadow:4px 4px 30px rgba(192, 183, 183, 0.842),-4px -4px 30px rgba(192, 183, 183, 0.842);
     border-radius: 10%;
     background-color: rgba(254, 255, 236, 0.116);
@@ -264,12 +249,12 @@ div#borsko.slika1 div:nth-child(7){ background-image: url('slike/borsko7.jpg'); 
 
 div#egina.slika1 div:nth-child(1){ background-image: url('slike/egina1.jpg'); }
 div#egina.slika1 div:nth-child(2){ background-image: url('slike/egina10.jpeg'); }
-div#egina.slika1 div:nth-child(3){ background-image: url('slike/egina3.jpg');	}
-div#egina.slika1 div:nth-child(4){ background-image: url('slike/egina4.jpg');	}
-div#egina.slika1 div:nth-child(5){ background-image: url('slike/egina9.jpg');	}
-div#egina.slika1 div:nth-child(6){ background-image: url('slike/egina6.jpg');	}
-div#egina.slika1 div:nth-child(7){ background-image: url('slike/egina7.jpg');	}
-div#egina.slika1 div:nth-child(8){ background-image: url('slike/egina8.jpg');	}
+div#egina.slika1 div:nth-child(3){ background-image: url('slike/egina3.jpg'); }
+div#egina.slika1 div:nth-child(4){ background-image: url('slike/egina4.jpg'); }
+div#egina.slika1 div:nth-child(5){ background-image: url('slike/egina9.jpg'); }
+div#egina.slika1 div:nth-child(6){ background-image: url('slike/egina6.jpg'); }
+div#egina.slika1 div:nth-child(7){ background-image: url('slike/egina7.jpg'); }
+div#egina.slika1 div:nth-child(8){ background-image: url('slike/egina8.jpg'); }
 
 div#nikiana.slika1 div:nth-child(1){ background-image: url('slike/nikiana6.jpg'); }
 div#nikiana.slika1 div:nth-child(2){ background-image: url('slike/nikiana8.jpg'); }
